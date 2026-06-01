@@ -8,6 +8,6 @@ FROM eclipse-temurin:25-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 8887
+EXPOSE 10000
 
 ENTRYPOINT ["java", "-Dspring.profiles.active=${SPRING_PROFILE_ACTIVE:prod}", "-jar", "app.jar"]
