@@ -10,4 +10,4 @@ COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 10000
 
-ENTRYPOINT ["sh", "-c", "java", "-Dspring.profiles.active=${SPRING_PROFILES_ACTIVE:prod}", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=${SPRING_PROFILES_ACTIVE:prod}", "-jar", "app.jar"]
